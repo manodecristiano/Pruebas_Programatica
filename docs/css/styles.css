@@ -11,6 +11,7 @@
 body {
     font-family: 'Jakarta', Semibold;
     background-color: bisque;
+    width: 100%;
 
 }
 
@@ -38,18 +39,22 @@ body {
     justify-content: center;
     align-items: center;
     /*adaptables sin usar mediaqueris*/
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    position: relative; */
 }
 
 .about__element {
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    width: 361px;
+    padding: 20px;
+    width: fit-content;
+
 }
 
 .about__title {
+    text-align: center;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
