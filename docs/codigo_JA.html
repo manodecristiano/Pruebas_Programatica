@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tien21 Test page</title>
+
+    <script>
+        (function () {
+            const device =
+                document.documentElement.clientWidth < 768 ?
+                'mobile' :
+                document.documentElement.clientWidth < 1024 ?
+                'tablet' :
+                'desktop';
+
+            const domain = device === 'mobile' ? 'm.tien21.es' : 'tien21.es';
+            const adUnit = `/123456/${domain}/subcategorias_`;
+
+            window.adsDataLayer = {
+                adUnit,
+                device,
+                targetings: {
+                    categoria: 'Gran Electrodoméstico',
+                    subcategorias: ['Lavadoras', 'Lavadoras-Secadoras'],
+                    marca: 'Siemens',
+                },
+            };
+        })();
+    </script>
+    <script async src="https://domain/path/to/ads-library"></script>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni iusto molestiae voluptates, fuga maiores
+        corrupti nemo sequi at cumque fugiat veniam, obcaecati hic quibusdam facere possimus libero totam praesentium.
+    </p>
+
+    <!-- Example leaderboard (same location for all devices) -->
+    <div id="ldb" class="henneoHB" data-device="all" data-size-desktop="1200x250" data-size-mobile="320x100,320x50"
+        data-size-tablet="780x90"></div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni iusto molestiae voluptates, fuga maiores
+        corrupti nemo sequi at cumque fugiat veniam, obcaecati hic quibusdam facere possimus libero totam praesentium.
+    </p>
+
+    <!-- Example "medium banner" only for mobile devices (desktop & tablet devices use other location) -->
+    <div id="mpu" class="henneoHB" data-device="mobile" data-size-mobile="300x250"></div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni iusto molestiae voluptates, fuga maiores
+        corrupti nemo sequi at cumque fugiat veniam, obcaecati hic quibusdam facere possimus libero totam praesentium.
+    </p>
+
+    <!-- Example "medium banner" only for tablet & desktop devices (mobile devices use other location) -->
+    <div id="mpu" class="henneoHB" data-device="desktop,tablet" data-size-desktop="300x250" data-size-tablet="300x250">
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni iusto molestiae voluptates, fuga maiores
+        corrupti nemo sequi at cumque fugiat veniam, obcaecati hic quibusdam facere possimus libero totam praesentium.
+    </p>
+</body>
+
+</html>
